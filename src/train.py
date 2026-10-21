@@ -13,6 +13,7 @@ from sklearn.metrics import r2_score, mean_absolute_error
 
 SEED = 42  # fixed seed = reproducible results
 
+print("Loading dataset")
 df = pd.read_csv("data/processed/laptops_clean.csv")
 X = df.drop(columns=["Price"])
 y = np.log(df["Price"])
@@ -20,6 +21,7 @@ y = np.log(df["Price"])
 cat_cols = ["Company", "TypeName", "Cpu_brand", "Gpu_brand", "OS"]
 num_cols = [c for c in X.columns if c not in cat_cols]
 
+print("Preprocessing data")
 prep = ColumnTransformer([
     ("cat", OneHotEncoder(handle_unknown="ignore"), cat_cols),
     ("num", StandardScaler(), num_cols),
@@ -33,6 +35,7 @@ models = {
     "RandomForest": RandomForestRegressor(n_estimators=200, random_state=SEED, n_jobs=-1),
 }
 
+print("Training ML models")
 results, best_name, best_score, best_pipe = {}, None, -1e9, None
 for name, model in models.items():
     pipe = Pipeline([("prep", prep), ("model", model)])
