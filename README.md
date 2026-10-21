@@ -11,4 +11,3 @@ Predict laptop price from its specs (RAM, CPU, GPU, storage, screen, etc.).
 
 Results are saved in `reports/metrics.json`, model in `models/`.
 Random seed is fixed (42), so results are the same every run.
-WRONG LINE ADDED BY MISTAKE
