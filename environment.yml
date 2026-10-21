@@ -1,0 +1,14 @@
+# Step 5: Create environment.yml (Conda environment file)
+name: laptop-mlops
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - numpy==1.26.4
+      - pandas==2.2.2
+      - scikit-learn==1.5.1
+      - matplotlib==3.8.4
+      - seaborn==0.13.2
+      - joblib==1.4.2

@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "best_model": "RandomForest",
+  "results": {
+    "LinearRegression": {
+      "r2": 0.8267,
+      "mae_price": 226.67
+    },
+    "RandomForest": {
+      "r2": 0.8741,
+      "mae_price": 182.68
+    }
+  }
+}

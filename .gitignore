@@ -1,0 +1,10 @@
+# Step 19: .gitignore - files Git should NOT track
+__pycache__/
+*.pyc
+.venv/
+.env
+.ipynb_checkpoints/
+data/
+models/
+*.pkl
+*.joblib
