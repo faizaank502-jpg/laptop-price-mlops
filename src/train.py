@@ -32,7 +32,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 models = {
     "LinearRegression": LinearRegression(),
-    "RandomForest": RandomForestRegressor(n_estimators=200, random_state=SEED, n_jobs=-1),
+    "RandomForest": RandomForestRegressor(n_estimators=300, random_state=SEED, n_jobs=-1),
 }
 
 print("Training ML models")
